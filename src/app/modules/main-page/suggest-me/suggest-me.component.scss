@@ -1,0 +1,33 @@
+@import "../../../../shared-styles/variables";
+@import "../../../../shared-styles/mixins";
+
+.suggest-wrapper {
+    height: 100vh; //?
+}
+
+.suggest__page-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-block: 60px 48px;
+
+    .appericiate {
+        @include heading-six;
+        margin-block: 16px 24px;
+    }
+
+    .page-title {
+        @include heading-one;
+    }
+
+    .search {
+        font-size: 16px;
+        color: #fff;
+
+    }
+}
+
+h1 {
+    margin: 0;
+}

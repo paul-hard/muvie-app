@@ -1,0 +1,33 @@
+@import "./variables";
+
+
+//typography----------------------------------
+@mixin heading-one {
+    color: $text-grey50;
+    font-family: $ff;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 1.25;
+    letter-spacing: -2%;
+}
+
+@mixin nav-link {
+    color: $text-grey200;
+    font-family: $ff;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -2%;
+    text-decoration: none;
+    padding: 12px 16px;
+    margin-inline: 16px;
+}
+
+@mixin heading-six {
+    color: $text-grey300;
+    font-family: $ff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -1.5%;
+}
