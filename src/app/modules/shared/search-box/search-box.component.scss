@@ -7,6 +7,7 @@
     background-color: $bg-black10;
     display: flex;
     align-items: center;
+    padding-block: 4px;
 
     img {
         padding-inline: 20px;
@@ -14,7 +15,6 @@
 
     .example-full-width {
         width: 100%;
-        padding-block: 5px;
 
         mat-label {
             font-size: 14px;
@@ -41,6 +41,12 @@
         ::ng-deep .mat-form-field-underline .mat-form-field-ripple {
             background-color: transparent;
         }
+
+        ::ng-deep .mat-form-field-wrapper,
+        .ng-tns-c71-0 {
+            padding-bottom: 0px;
+        }
+
 
     }
 }

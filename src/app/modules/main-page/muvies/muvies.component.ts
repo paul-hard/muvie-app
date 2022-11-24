@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MainPageService } from '../services/main-page.service'
+import { SharedService } from '../../shared/shared/shared.service';
 
-import { IResponce } from '../services/main-page.service';
+import { IMuvie } from '../../global-interfaces';
 
 @Component({
   selector: 'app-muvies',
@@ -9,35 +9,25 @@ import { IResponce } from '../services/main-page.service';
   styleUrls: ['./muvies.component.scss']
 })
 export class MuviesComponent implements OnInit {
-  // public baseURL: string = 'https://image.tmdb.org/t/p/w250'
-  // public films: IResponce = {
-  //   results: [
-  //     {
-  //       original_title: "",
-  //       backdrop_path: "",
-  //       overview: "",
-  //       popularity: 0,
-  //       poster_path: "",
-  //       release_date: "",
-  //       title: "",
-  //       video: false,
-  //       vote_average: 0,
-  //       vote_count: 0,
-  //     }
-  //   ]
-  // }
-
+  public baseURL: string = 'https://image.tmdb.org/t/p/w250'
+  public muvies: IMuvie[] = []
 
 
   constructor(
+    private service: SharedService,
   ) { }
 
   ngOnInit() {
-    // this.service.getPopular().subscribe(data => {
-    //   console.log(data.results);
-    //   this.films.results = data.results
-    // })
 
   }
+
+  searchMuvie(event: string) {
+    console.log(event); // get request with name, recived data filter and assign to muvies
+
+  }
+
+
+
+
 
 }

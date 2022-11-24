@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-search-box',
   templateUrl: './search-box.component.html',
   styleUrls: ['./search-box.component.scss']
 })
-export class SearchBoxComponent implements OnInit {
 
-  constructor() { }
+export class SearchBoxComponent {
 
-  ngOnInit(): void {
+
+  @Output() multiSearchEvent = new EventEmitter<string>();
+
+
+  onKeyUpMultiSerach(event: string) {
+    this.multiSearchEvent.emit(event)
+
   }
+
 
 }

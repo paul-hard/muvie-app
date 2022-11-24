@@ -7,14 +7,11 @@
             <h1>Muvies</h1>
         </div>
         <div class="search">
-            <app-search-box></app-search-box>
+            <app-search-box (multiSearchEvent)="searchMuvie($event)"></app-search-box>
         </div>
     </div>
-    <!-- <div class="muvies__cards">
-        <div class="card-defauld" *ngFor="let card of films.results">
-            <img src="https://image.tmdb.org/t/p/w500/{{card.poster_path}}" alt="">
-            <span>{{card.title}}</span>
-        </div>
-    </div> -->
-    <app-card></app-card>
+    <a routerLink="/details">
+        <app-card [recivedMuvie]="muvies"></app-card>
+    </a>
+    {{muvies | json}}
 </div>

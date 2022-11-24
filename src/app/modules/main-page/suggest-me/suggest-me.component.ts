@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { MainPageService } from '../services/main-page.service';
+import { IResponce } from '../../global-interfaces';
 
 @Component({
   selector: 'app-suggest-me',
@@ -7,9 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuggestMeComponent implements OnInit {
 
-  constructor() { }
+  public multiSearchName: string = '';
+  public multiSearchResponce!: IResponce;
+
+
+  constructor(
+    private service: MainPageService
+  ) { }
 
   ngOnInit(): void {
+
   }
+
+  multiSearchEvent(event: string) {
+    this.multiSearchName = event
+  }
+
+  multiSearchInitClick() {
+    console.log('clicked');
+    this.service.getMultiSearch(this.multiSearchName).subscribe(data => {
+      this.multiSearchResponce = data
+      console.log(data);
+      console.log(data.results);
+    })
+  }
+
+
 
 }

@@ -1,14 +1,15 @@
 @import "../../../../shared-styles/variables";
 @import "../../../../shared-styles/mixins";
 
-.home-rapper {}
+.home-wrapper {
+    padding-block: 80px 156px;
+}
 
 .home__page-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-block: 60px 48px;
 
     .project-decription {
         max-width: 588px;
