@@ -1,0 +1,38 @@
+@import "../../../../shared-styles/variables";
+@import "../../../../shared-styles/mixins";
+
+.tv-wrapper {
+    padding-block: 60px 156px;
+}
+
+.tv__page-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 48px;
+
+    .user-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 12px;
+        line-height: 1.33;
+        font-weight: 400;
+        color: $text-primary200;
+    }
+
+    .page-title {
+        @include heading-one;
+    }
+
+    .search {
+        font-size: 16px;
+        color: #fff;
+
+    }
+}
+
+h1 {
+    margin: 0;
+}
